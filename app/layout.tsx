@@ -25,9 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-6 m-0`}
       >
-        {children}
+        {/* Wrapping children in a max-width container is often helpful */}
+        <main className="w-full max-w-2xl">
+          {children}
+        </main>
       </body>
     </html>
   );
